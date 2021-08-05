@@ -6,26 +6,25 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.8rem;
-}
 a {
   text-decoration: none;
   color: inherit;
 }
+/* --------------------------- APP NAME */
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.8rem;
+}
+
 .app-name {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 .app-name img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
-img {
-    width: 18px;
-    height: 18px;
-    /* margin-top: 5px; */
-}
+
+/* --------------------------- COUNTRY INPUT */
 input[id='country'] {
   /* appearance: none; */
   background: rgba(42, 157, 143, 0.07);
@@ -39,8 +38,26 @@ input[id='country'] {
   box-shadow: 0px 4px 3px rgba(42, 157, 143, 0.5);
 }
 .search-label {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 18px;
+  height: 18px;
+  /* margin-top: 5px; */
+}
+
+/* --------------------------- GLOBAL STATS */
+ul {
+  background: rgba(193, 26, 56, 0.07);
+  padding: 0.8rem;
+
+  border: 2px solid #c11a38;
+  border-radius: 15px;
+  box-shadow: 0px 4px 3px rgba(193, 26, 56, 0.5);
+}
+ul li {
+  list-style-type: none;
 }
 
 /* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
@@ -106,8 +123,9 @@ input[id='country'] {
 /* ------------------------------------------------ GRID  */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: 1.5rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+  /* gap: 1rem; */
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .column-lg {
