@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -56,8 +56,16 @@ ul {
   border-radius: 15px;
   box-shadow: 0px 4px 3px rgba(193, 26, 56, 0.5);
 }
-ul li {
+li:nth-child(1) {
+  color: #c11a38;
+  font-weight: 500;
+}
+li {
   list-style-type: none;
+}
+.global-stats p:nth-child(2) {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
 }
 
 /* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
