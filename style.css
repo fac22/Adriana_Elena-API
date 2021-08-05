@@ -1,3 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* --------------------------- APP NAME */
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.app-name {
+  margin-bottom: 4rem;
+}
+.app-name img {
+  width: 60px;
+  height: 60px;
+}
+
+/* --------------------------- COUNTRY INPUT */
+input[id='country'] {
+  /* appearance: none; */
+  background: rgba(42, 157, 143, 0.07);
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+
+  width: 20rem;
+  padding: 1rem;
+  border: 2px solid #457b9d;
+  border-radius: 15px;
+  box-shadow: 0px 4px 3px rgba(42, 157, 143, 0.5);
+
+  transition: all 0.5s;
+}
+input[id='country']:focus,
+input[id='country']:hover {
+  outline: none;
+  border-color: #32a2bb;
+  box-shadow: 0px 4px 5px rgba(50, 187, 171, 0.502);
+}
+.search-label {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+img {
+  width: 18px;
+  height: 18px;
+  /* margin-top: 5px; */
+}
+
+/* --------------------------- LAST VISITED */
+.last-visited {
+  background: rgba(87, 16, 137, 0.07);
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+
+  font-size: 11px;
+  /* padding: 0.1rem; */
+
+  border: 1px solid #571089;
+  border-radius: 25px;
+  box-shadow: 0px 4px 3px rgba(87, 16, 137, 0.5);
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.last-visited p:nth-child(2) {
+  font-family: 'Roboto Mono', monospace;
+}
+.last-visited:hover {
+  box-shadow: 0px 4px 3px rgba(160, 28, 180, 0.5);
+}
+
+/* --------------------------- GLOBAL STATS */
+.global-list {
+  background: rgba(193, 26, 56, 0.07);
+  padding: 0.8rem;
+
+  border: 2px solid #c11a38;
+  border-radius: 15px;
+  box-shadow: 0px 4px 3px rgba(193, 26, 56, 0.5);
+}
+.global-list li:nth-child(1) {
+  color: #c11a38;
+  font-weight: 500;
+}
+li {
+  list-style-type: none;
+}
+.global-stats p:nth-child(2) {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+}
+
+/* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
+/* -----------------------------------------------------------------            ------------------------------------------------------------- */
+/* -----------------------------------------------------------------            ------------------------------------------------------------- */
+
+/* ------------------------------------------------ CENTER / WIDTH  */
+.center {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-sm {
+  max-width: 20rem;
+}
+
+.width-md {
+  max-width: 50rem;
+}
+
+.width-lg {
+  max-width: 60rem;
+}
+
+/* ------------------------------------------------ MARGIN STACKS  */
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+
+.stack-md > * + * {
+  margin-top: 1rem;
+}
+
+.stack-lg > * + * {
+  margin-top: 2rem;
+}
+
+.stack-xl > * + * {
+  margin-top: 4rem;
+}
+
+/* ------------------------------------------------ HORIZONTAL ALIGNEMENT  */
+.row {
+  display: flex;
+  gap: 1rem;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.gap-lg {
+  gap: 2rem;
+}
+
+.gap-xl {
+  gap: 4rem;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* ------------------------------------------------ GRID  */
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+  /* gap: 1rem; */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.column-lg {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */

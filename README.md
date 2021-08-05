@@ -11,7 +11,7 @@
 1. Deciding on the MVP -  splitting & assigning tasks
     * COVID statistics tracking app
     * basic functionalities: country + global search
-1. User stories estimation :memo:
+    1. User stories estimation :memo:
     * country search
     * global stats
     * bookmark searches

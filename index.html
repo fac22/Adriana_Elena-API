@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="API website" />
     <meta name="keywords" content="HTML, CSS, JavaScript, API" />
     <meta name="author" content="Adriana Stanciu - Elena Marinaki" />
-    <title>API website</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>COVID Tracker</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="center width-sm row app-name">
+        <img src="images/virus.svg" alt="virus" />
+        <h1>COVID TRACKER</h1>
+      </div>
+    </header>
+    <main class="center width-sm stack-lg">
+      <!-- --------------------- COUNTRY SEARCH -->
+      <section>
+        <form class="stack-md">
+          <div>
+            <input type="text" id="country" name="country" />
+          </div>
+          <div class="center row search-label">
+            <label for="country">Search for a country</label>
+            <img src="images/loupe.svg" alt="magnifying glass" />
+          </div>
+        </form>
+      </section>
+      <section>
+        <div class="center row last-visited">
+          <p>Last visited:</p>
+          <p>London</p>
+        </div>
+      </section>
+      <!-- --------------------- GLOBAL STATS -->
+      <section>
+        <ul class="center width-sm grid column-md global-list">
+          <li>
+            <div class="row justify-space-between">
+              <p>Global Stats</p>
+              <p>Date</p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Confirmed:</p>
+              <p>100282(N) - 1162857(T)</p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Deaths:</p>
+              <p>100282(N) - 1162857(T)</p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Recovered:</p>
+              <p>100282(N) - 1162857(T)</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- --------------------- COUNTRY RESULTS TEMPLATE -->
+      <template>
+        <ul>
+          <li>
+            <div class="row justify-space-between">
+              <p>Search Results for:</p>
+              <p id="result-country"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Confirmed:</p>
+              <p id="confirmed"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Deaths:</p>
+              <p id="deaths"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Recovered:</p>
+              <p id="recovered"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Active:</p>
+              <p id="active"></p>
+            </div>
+          </li>
+        </ul>
+      </template>
+    </main>
+  </body>
 </html>
