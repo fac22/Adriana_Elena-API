@@ -20,7 +20,7 @@
       </div>
     </header>
     <main class="center width-sm stack-lg">
-        <!-- --------------------- COUNTRY SEARCH -->
+      <!-- --------------------- COUNTRY SEARCH -->
       <section>
         <form class="stack-md">
           <div>
@@ -33,14 +33,14 @@
         </form>
       </section>
       <section>
-          <div class="center row last-visited">
-              <p>Last visited:</p>
-              <p>London</p>
-          </div>
+        <div class="center row last-visited">
+          <p>Last visited:</p>
+          <p>London</p>
+        </div>
       </section>
       <!-- --------------------- GLOBAL STATS -->
       <section>
-        <ul class="center width-sm grid column-md">
+        <ul class="center width-sm grid column-md global-list">
           <li>
             <div class="row justify-space-between">
               <p>Global Stats</p>
@@ -67,6 +67,42 @@
           </li>
         </ul>
       </section>
+
+      <!-- --------------------- COUNTRY RESULTS TEMPLATE -->
+      <template>
+        <ul>
+          <li>
+            <div class="row justify-space-between">
+              <p>Search Results for:</p>
+              <p id="result-country"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Confirmed:</p>
+              <p id="confirmed"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Deaths:</p>
+              <p id="deaths"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Recovered:</p>
+              <p id="recovered"></p>
+            </div>
+          </li>
+          <li>
+            <div class="row global-stats">
+              <p>Active:</p>
+              <p id="active"></p>
+            </div>
+          </li>
+        </ul>
+      </template>
     </main>
   </body>
 </html>

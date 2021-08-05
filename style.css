@@ -82,7 +82,7 @@ img {
 }
 
 /* --------------------------- GLOBAL STATS */
-ul {
+.global-list {
   background: rgba(193, 26, 56, 0.07);
   padding: 0.8rem;
 
@@ -90,7 +90,7 @@ ul {
   border-radius: 15px;
   box-shadow: 0px 4px 3px rgba(193, 26, 56, 0.5);
 }
-li:nth-child(1) {
+.global-list li:nth-child(1) {
   color: #c11a38;
   font-weight: 500;
 }
