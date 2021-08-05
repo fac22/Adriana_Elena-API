@@ -7,14 +7,41 @@
     <meta name="description" content="API website" />
     <meta name="keywords" content="HTML, CSS, JavaScript, API" />
     <meta name="author" content="Adriana Stanciu - Elena Marinaki" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>COVID Tracker</title>
   </head>
+
   <body>
-    <section>
-      <form action="">
-        <input type="text" id="country" name="country" />
-        <label for="country">Search for a country</label>
-      </form>
-    </section>
+    <header>
+      <div class="center width-sm row app-name">
+          <img src="images/virus.svg" alt="virus">
+        <h1>COVID TRACKER</h1>
+      </div>
+    </header>
+    <main class="center width-sm stack-lg">
+      <section>
+        <form class="stack-md">
+          <div>
+            <input type="text" id="country" name="country" />
+          </div>
+          <div class="center row search-label">
+            <label for="country">Search for a country</label>
+            <img src="images/loupe.svg" alt="magnifying glass" />
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <ul class="center width-sm grid column-md">
+          <li>
+            <div class="row center justify-space-between">
+              <p>Global Stats</p>
+              <p>Date</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

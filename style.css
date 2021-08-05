@@ -1,9 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
+
 * {
   box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+.app-name {
+    margin-bottom: 4rem;
+}
+.app-name img {
+    width: 60px;
+    height: 60px;
+}
+img {
+    width: 18px;
+    height: 18px;
+    /* margin-top: 5px; */
+}
+input[id='country'] {
+  /* appearance: none; */
+  background: rgba(42, 157, 143, 0.07);
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+
+  width: 20rem;
+  padding: 1rem;
+  border: 2px solid #457b9d;
+  border-radius: 15px;
+  box-shadow: 0px 4px 3px rgba(42, 157, 143, 0.5);
+}
+.search-label {
+    justify-content: center;
+    align-items: center;
 }
 
 /* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
