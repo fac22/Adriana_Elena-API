@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap");
 
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 a {
   text-decoration: none;
@@ -12,7 +12,7 @@ a {
 }
 /* --------------------------- APP NAME */
 h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -26,11 +26,11 @@ h1 {
 }
 
 /* --------------------------- COUNTRY INPUT */
-input[id='country'] {
+input[id="country"] {
   /* appearance: none; */
   background: rgba(42, 157, 143, 0.07);
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   width: 20rem;
   padding: 1rem;
@@ -40,8 +40,8 @@ input[id='country'] {
 
   transition: all 0.5s;
 }
-input[id='country']:focus,
-input[id='country']:hover {
+input[id="country"]:focus,
+input[id="country"]:hover {
   outline: none;
   border-color: #32a2bb;
   box-shadow: 0px 4px 5px rgba(50, 187, 171, 0.502);
@@ -78,7 +78,7 @@ button {
   cursor: pointer;
 }
 .last-visited p:nth-child(2) {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 .last-visited:hover {
   box-shadow: 0px 4px 3px rgba(160, 28, 180, 0.5);
@@ -101,7 +101,7 @@ li {
   list-style-type: none;
 }
 .global-stats p:nth-child(2) {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 13px;
 }
 
