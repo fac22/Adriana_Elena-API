@@ -49,12 +49,15 @@ input[id='country']:hover {
 .search-label {
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 img {
   width: 18px;
   height: 18px;
   /* margin-top: 5px; */
+}
+button {
+  visibility: hidden;
 }
 
 /* --------------------------- LAST VISITED */
