@@ -1,15 +1,14 @@
+const form = document.querySelector('form');
+
 function init() {
   document.querySelector('#country').value = '';
 }
 
-window.addEventListener('load', init);
-
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (e) => {
+function searchCountry(e) {
   e.preventDefault();
 
-//   First, we have to check if we have made any other search. That would
+  //   First, we have to check if we have made any other search. That would mean that we have already created a template, so we can just re-use it, instead of creating a new one.
+  // This way, we don't add new templates with every new search and the results appear neatly on our page!
   const oldTemplate = document.querySelector('#country-search');
   if (oldTemplate !== null) {
     const formData = new FormData(form);
@@ -42,7 +41,9 @@ form.addEventListener('submit', (e) => {
         console.log(error);
         alert(error);
       });
-  } else {
+  }
+  //   if we have reached this point, it means we are on the FIRST country search since the loading of the page, so we have to CREATE the template for our first results.
+  else {
     const formData = new FormData(form);
     const data = formData.get('country');
 
@@ -81,4 +82,8 @@ form.addEventListener('submit', (e) => {
         alert(error);
       });
   }
-});
+}
+
+
+window.addEventListener('load', init);
+form.addEventListener('submit', searchCountry);
