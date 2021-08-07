@@ -30,8 +30,14 @@
             <label for="country">Search for a country</label>
             <img src="images/loupe.svg" alt="magnifying glass" />
           </div>
+          <!-- <button type="submit">Search</button> -->
         </form>
       </section>
+
+      <!-- --------------------- ATTACHMENT POINT -->
+      <div id="attach"></div>
+
+      <!-- --------------------- LAST VISITED -->
       <section>
         <div class="center row last-visited">
           <p>Last visited:</p>
@@ -40,7 +46,7 @@
       </section>
       <!-- --------------------- GLOBAL STATS -->
       <section>
-        <ul class="center width-sm grid column-md global-list">
+        <ul class="center width-sm grid column-md" id="global-list">
           <li>
             <div class="row justify-space-between">
               <p>Global Stats</p>
@@ -67,14 +73,13 @@
           </li>
         </ul>
       </section>
-
       <!-- --------------------- COUNTRY RESULTS TEMPLATE -->
-      <template>
-        <ul>
+      <template id="country-results">
+        <ul id="country-search" class="center width-sm">
           <li>
             <div class="row justify-space-between">
-              <p>Search Results for:</p>
-              <p id="result-country"></p>
+              <p>Latest Covid Numbers for:</p>
+              <p id="searched-country"></p>
             </div>
           </li>
           <li>
