@@ -1,6 +1,6 @@
 const form = document.querySelector("form");
 
-const getJSON = function (url, errorMsg = "Something went wrong") {
+function getJSON(url, errorMsg = "Something went wrong") {
   return fetch(url)
     .then((response) => {
       if (!response.ok) throw new Error(`${errorMsg}: (${response.status})`);
@@ -11,7 +11,7 @@ const getJSON = function (url, errorMsg = "Something went wrong") {
         return array[array.length - 1];
       } else throw new Error("Invalid country");
     });
-};
+}
 
 function init() {
   document.querySelector("#country").value = "";
@@ -66,3 +66,34 @@ function searchCountry(e) {
 
 window.addEventListener("load", init);
 form.addEventListener("submit", searchCountry);
+
+// geolocation
+
+function getPosition() {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+}
+
+function whereAmI(e) {
+  getPosition()
+    .then((pos) => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+
+      return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    })
+    .then((response) => {
+      if (!response.ok)
+        throw new Error(`Problem with geocoding ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      document.querySelector("#country").value = data.country;
+      searchCountry(e);
+    })
+    .catch((err) => console.error(`${err.message}`));
+}
+
+const btn = document.querySelector(".last-visited");
+
+btn.addEventListener("click", whereAmI);
