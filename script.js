@@ -1,3 +1,5 @@
+document.querySelector("#copy-year").innerHTML = new Date().getFullYear();
+
 const form = document.querySelector("form");
 
 function getJSON(url, errorMsg = "Something went wrong") {
