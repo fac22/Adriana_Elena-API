@@ -1,6 +1,7 @@
 document.querySelector("#copy-year").innerHTML = new Date().getFullYear();
 
 const form = document.querySelector("form");
+const spinner = document.querySelector(".spinner");
 
 function getJSON(url, errorMsg = "Something went wrong") {
   return fetch(url)
@@ -42,6 +43,7 @@ function searchCountry(e) {
     "Error in retrieving country data!"
   )
     .then((countryData) => {
+      spinner.classList.add("hidden");
       const oldTemplate = document.querySelector("#country-search");
 
       //   First, we have to check if we have made any other search. That would mean that we have already created a template, so we can just re-use it, instead of creating a new one.
@@ -61,6 +63,7 @@ function searchCountry(e) {
       }
     })
     .catch((error) => {
+      spinner.classList.add("hidden");
       console.log(error);
       alert(`${error.message}. Try again!`);
     });
@@ -78,6 +81,7 @@ function getPosition() {
 }
 
 function whereAmI(e) {
+  spinner.classList.remove("hidden");
   getPosition()
     .then((pos) => {
       const { latitude: lat, longitude: lng } = pos.coords;
