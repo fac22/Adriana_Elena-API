@@ -1,6 +1,7 @@
 document.querySelector("#copy-year").innerHTML = new Date().getFullYear();
 
 const form = document.querySelector("form");
+const spinner = document.querySelector(".spinner");
 
 function getJSON(url, errorMsg = "Something went wrong") {
   return fetch(url)
@@ -20,6 +21,8 @@ function init() {
 }
 
 function populateCountryData(domElement, countryData) {
+  spinner.classList.add("hidden");
+
   domElement.querySelector("#searched-country").textContent =
     countryData.Country;
   domElement.querySelector("#confirmed").textContent = countryData.Confirmed;
@@ -33,6 +36,7 @@ function populateCountryData(domElement, countryData) {
 
 function searchCountry(e) {
   e.preventDefault();
+  spinner.classList.remove("hidden");
 
   const formData = new FormData(form);
   const data = formData.get("country");
@@ -61,6 +65,7 @@ function searchCountry(e) {
       }
     })
     .catch((error) => {
+      spinner.classList.add("hidden");
       console.log(error);
       alert(`${error.message}. Try again!`);
     });
@@ -78,6 +83,7 @@ function getPosition() {
 }
 
 function whereAmI(e) {
+  spinner.classList.remove("hidden");
   getPosition()
     .then((pos) => {
       const { latitude: lat, longitude: lng } = pos.coords;
