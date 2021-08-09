@@ -21,6 +21,8 @@ function init() {
 }
 
 function populateCountryData(domElement, countryData) {
+  spinner.classList.add("hidden");
+
   domElement.querySelector("#searched-country").textContent =
     countryData.Country;
   domElement.querySelector("#confirmed").textContent = countryData.Confirmed;
@@ -34,6 +36,7 @@ function populateCountryData(domElement, countryData) {
 
 function searchCountry(e) {
   e.preventDefault();
+  spinner.classList.remove("hidden");
 
   const formData = new FormData(form);
   const data = formData.get("country");
@@ -43,7 +46,6 @@ function searchCountry(e) {
     "Error in retrieving country data!"
   )
     .then((countryData) => {
-      spinner.classList.add("hidden");
       const oldTemplate = document.querySelector("#country-search");
 
       //   First, we have to check if we have made any other search. That would mean that we have already created a template, so we can just re-use it, instead of creating a new one.
