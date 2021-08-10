@@ -105,3 +105,8 @@ function whereAmI(e) {
 const btn = document.querySelector(".last-visited");
 
 btn.addEventListener("click", whereAmI);
+
+// ---------------------------- GLOBAL STATS
+function globalStats() {
+
+}
