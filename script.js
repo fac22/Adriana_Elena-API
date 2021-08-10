@@ -113,9 +113,11 @@ function globalStats() {
   const deaths = document.querySelector('#deaths');
   const recovered = document.querySelector('#recovered');
 
+  // getting the current date
   let d = new Date();
   date.textContent = d.toLocaleString('en-UK').slice(0, 10);
 
+  // fetching the global data
   fetch('https://api.covid19api.com/summary')
     .then((response) => response.json())
     .then((data) => {
